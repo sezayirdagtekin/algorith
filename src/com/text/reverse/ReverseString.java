@@ -8,6 +8,10 @@ public class ReverseString {
 		System.out.println(reverse(""));
 		System.out.println(reverse(null));
 
+		System.out.println(reverseWithStringBuilder("java"));
+		System.out.println(reverseWithStringBuilder(""));
+		System.out.println(reverseWithStringBuilder(null));
+
 	}
 
 	private static String reverse(String text) {
@@ -20,6 +24,15 @@ public class ReverseString {
 			reverse.append(text.charAt(i));
 		}
 		return reverse.toString();
+	}
+
+	private static String reverseWithStringBuilder(String text) {
+		if (text == null || text.isEmpty()) {
+			return text;
+		}
+		
+		StringBuilder reverse = new StringBuilder(text);
+		return reverse.reverse().toString();
 	}
 
 }
