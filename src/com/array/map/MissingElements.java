@@ -1,4 +1,4 @@
-package com.array.difference;
+package com.array.map;
 
 import java.util.ArrayList;
 import java.util.HashSet;
